@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statistics-for-data"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scipy",
+  "statsmodels",
+  "scikit-learn",
+  "matplotlib",
+  "seaborn",
+  "pingouin",
+  "requests"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "black",
+  "isort",
+  "pre-commit",
+  "jupyter",
+  "nbconvert"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
